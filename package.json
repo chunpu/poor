@@ -1,0 +1,38 @@
+{
+  "name": "poor",
+  "version": "1.1.0",
+  "description": "Mocha tests in all browsers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "readme": "pretty-readme > readme.md"
+  },
+  "bin": {
+    "poor": "./bin/poor.js"
+  },
+  "author": "chunpu",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^0.9.0",
+    "browser-mocha": "latest",
+    "commander": "^2.6.0",
+    "lodash": "^2.4.1",
+    "stdin": "0.0.1",
+    "wd-browser": "^1.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chunpu/poor.git"
+  },
+  "keywords": [
+    "mocha",
+    "browser",
+    "webdriver",
+    "sauceLabs"
+  ],
+  "bugs": {
+    "url": "https://github.com/chunpu/poor/issues"
+  },
+  "homepage": "https://github.com/chunpu/poor"
+}
