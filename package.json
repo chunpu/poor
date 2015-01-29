@@ -1,6 +1,6 @@
 {
   "name": "poor",
-  "version": "1.1.0",
+  "version": "1.1.3",
   "description": "Mocha tests in all browsers",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "browser-mocha": "latest",
     "commander": "^2.6.0",
     "lodash": "^2.4.1",
+    "only": "0.0.2",
     "stdin": "0.0.1",
     "wd-browser": "^1.1.0"
   },

@@ -33,7 +33,10 @@ stdin(function(str) {
 	}).join(' ')
 	var opt = only(program, params)
 	poor(str, opt, function(err, ret) {
-		if (!err && ret && !ret.hasFailed) {
+		if (err) {
+			return console.error(err)
+		}
+		if (ret && !ret.hasFailed) {
 			process.exit(0)
 		} else {
 			process.exit(1)
