@@ -15,13 +15,15 @@ function Poor(str, opt, cb) {
 				  browser: browser
 				, script: str
 				, sauceLabs: true
+				, reporter: 'dot' // bdd is error...
 			})
 			return ret
 		})
 	} else {
 		// phantomjs
 		arr = [_.extend({}, opt, {
-			script: str
+			script: str,
+			reporter: 'dot' // bdd is error...
 		})]
 	}
 	

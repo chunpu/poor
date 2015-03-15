@@ -7,6 +7,7 @@ var _ = require('lodash')
 var stdin = require('stdin')
 var only = require('only')
 var poor = require('../')
+require('vvv')
 
 program
 	.version(pkg.version)
@@ -16,9 +17,9 @@ program
 	.option('--timeout [value]', 'mocha async timeout', parseInt)
 	.option('--shim [value]', 'if use es-shim, default is true', Boolean)
 	.option('--title [value]', 'web page title', Boolean)
+	.option('--url [value]', 'test on url')
+	.option('-v, --verbose', 'verbose', _.noop, 0)
 	.parse(process.argv)
-
-//console.log(program)
 
 function parseBrowser(val) {
 	val = val || ''
@@ -32,6 +33,8 @@ stdin(function(str) {
 		return opt.long.replace(/^--/, '')
 	}).join(' ')
 	var opt = only(program, params)
+	log.v('options: %j', opt)
+
 	poor(str, opt, function(err, ret) {
 		if (err) {
 			return console.error(err)
